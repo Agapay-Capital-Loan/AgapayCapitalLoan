@@ -1,0 +1,210 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+html, body {
+    height: 200%; /* Ensure the body and html take up full height */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body is at least as tall as the viewport */
+    overflow-y: auto;
+}
+
+/* Content Area */
+.main-content {
+    flex-grow: 1; /* Allows the content to take up remaining space */
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px; /* Fixed max-width for the container */
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for small screens */
+}
+
+/* Header */
+header {
+    background-color: #003366;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    transition: top 0.3s;
+    display: flex;
+    z-index: 1000;
+    justify-content: space-between; /* Distribute elements across the header */
+    align-items: center; /* Align items vertically */
+    height: 80px; /* Set a fixed height for the header */
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center; /* Ensure vertical alignment */
+}
+
+    .logo img {
+        height: 120px; /* Set the logo height to 120px */
+        width: auto;
+        transition: height 0.3s ease; /* Smooth transition when resizing the logo */
+    }
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+/* Search Box */
+.search-fb {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between input and icon */
+}
+
+    .search-fb input {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+    }
+
+/* Hero Section */
+.hero {
+    background-image: url('https://d2u9ftrwwkx3r3.cloudfront.net/2fbd42e2315b9119d751c76a64ec52e7/tn_00005.jpg');
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    text-align: left;
+    padding: 145px 10px 145px;
+    background-attachment: fixed;
+}
+
+    .hero h1 {
+        font-family: 'Arial', sans-serif;
+        font-size: 48px; /* Increased font size */
+        font-weight: bold;
+        font-style: normal;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added text shadow for better readability */
+        margin-bottom: 20px; /* Space between the title and the paragraph */
+    }
+
+    .hero p {
+        font-size: 20px; /* Adjust this value as needed */
+        max-width: 1100px; /* Limit the width to improve readability */
+        margin-bottom: 10px; /* Adds space between the paragraph and the button */
+        line-height: 2; /* Increases line height for better readability */
+    }
+
+    .hero .btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 25px;
+        background-color: #ffc107;
+        color: #003366;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+/* Services */
+.services {
+    background: white;
+    padding: 60px 20px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.service-box {
+    margin-top: 30px;
+}
+
+    .service-box h3 {
+        color: #003366;
+        margin-bottom: 10px;
+    }
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+/* Header hide on scroll down */
+.header-hidden {
+    top: -100px;
+}
+/* About Us Section */
+.about-us {
+    padding: 60px 20px;
+    background-color: #f5f7fa; /* Light background color */
+}
+
+    .about-us h2 {
+        color: #003366; /* Dark blue for header */
+        margin-bottom: -70px; /* Reduces space below the header */
+        font-size: 20px; /* Increases font size of the header */
+    }
+
+/* About Us Section */
+.about-us1 {
+    padding: 60px 20px;
+    background-color: #f5f7fa; /* Light background color */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Content container */
+.content {
+    display: flex; /* Flexbox to align text and image */
+    align-items: center; /* Vertically center the items */
+    justify-content: space-between; /* Space between text and image */
+}
+
+/* Text styles */
+.about-us1 p {
+    font-size: 17px; /* Sets the font size of the text */
+    line-height: 2; /* Increases the line height for better readability */
+    max-width: 600px; /* Limit text width for better readability */
+    margin-right: 10px; /* Adds space between the text and the image */
+}
+
+/* Image styles */
+.content img {
+    width: 500px; /* Set a fixed width for the image */
+    height: 800px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensures the image covers the given space */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    margin-left: 200px; /* Adds space between the image and the text */
+}

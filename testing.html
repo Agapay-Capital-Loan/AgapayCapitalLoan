@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ACL - Your Trusted Partner</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="LOGOCH.png" alt="Logo"> <!-- Logo Image -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Knowledge Hub</a></li>
+                    <li><a href="file:///C:/Users/User/Documents/Bank%20html/Calculator.html">Loan Calculator</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="search-fb">
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Empowering Your Financial<br>Growth, Every Step of the Way</h1>
+                <p>
+                    In today's ever-changing financial environment, managing your money wisely is essential to achieving long-term success.
+                    <br>
+                    At AGAPAY CAPITAL LOAN, we are committed to providing you with the tools and resources to help you secure a brighter future.
+                    <br>
+                    Let us take care of your banking needs with tailored services designed for individuals, families, and businesses.
+                </p>
+                <p>
+                    Whether you're saving for the future, securing a loan, or managing your finances, our experienced team is here to
+                    <br>
+                    guide you toward your financial goals, ensuring peace of mind every step of the way.
+                </p>
+                <a href="#" class="btn">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+
+
+    <section class="about-us1" style="background-color: #f5f5f5;">
+        <div class="about-container" style="display: flex; flex-wrap: wrap; width: 100%; max-width: 100%;">
+            <!-- Left: Text Content -->
+            <div class="text" style="flex: 1; padding: 60px; box-sizing: border-box;">
+                <small style="color: #f4a300; font-size: 16px; letter-spacing: 5px;">ABOUT US</small>
+                <br />
+                <br />
+                <br />
+                <h2 style="color: #189ad3; font-size: 32px; margin-top: 10px;">
+                    Highly Trusted.<br>
+                    Tailored Financial Solutions.<br>
+                    Your Partner in Financial Growth.
+                </h2>
+                <p style="margin-top: 20px; color: #444;">
+                    At AGAPAY CAPITAL LOAN, we are driven by a team of financial experts with years of experience in delivering exceptional financial services to individuals and businesses alike. Our diverse expertise spans across various sectors including personal finance, business loans, savings management, and more.
+                </p>
+                <p style="margin-top: 20px; color: #444;">
+                    We take pride in understanding each client’s unique financial situation and long-term goals, allowing us to provide solutions that are not just effective but also strategic in helping you achieve success. Whether you're looking for a loan, investment management, or expert advice, our team is committed to providing you with the highest standard of service, ensuring your financial future is secure and prosperous.
+                </p>
+                <p style="margin-top: 20px; color: #444;">
+                    Our goal is simple: to be your trusted partner in every financial decision you make, guiding you toward financial freedom and helping you grow every step of the way.
+                </p>
+            </div>
+
+            <!-- Right: Image -->
+            <div class="image" style="flex: 1; min-height: 400px;">
+                <img src="https://static.wixstatic.com/media/86f849_ee01b656a9da4a5a8354d6a82c7902d4~mv2.jpg/v1/fill/w_762,h_784,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/86f849_ee01b656a9da4a5a8354d6a82c7902d4~mv2.jpg"
+                     alt="Skyscrapers"
+                     style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+
+            <div class="service-box">
+                <h3>Personal Accounts</h3>
+                <p>Flexible savings and checking accounts tailored to your needs.</p>
+            </div>
+            <div class="service-box">
+                <h3>Business Loans</h3>
+                <p>Helping businesses grow with affordable financing options.</p>
+            </div>
+            <div class="service-box">
+                <h3>Online Banking</h3>
+                <p>Manage your finances anytime, anywhere, with our secure app.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>Agapay Capital Loans 2025 . All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        const header = document.getElementById('header');
+
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                header.classList.add('header-hidden');
+            } else {
+                header.classList.remove('header-hidden');
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
+
+</body>
+</html>

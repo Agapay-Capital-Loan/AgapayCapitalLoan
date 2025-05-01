@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="LOGOCH.png" alt="Logo"> <!-- Logo Image -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="file:///C:/Users/User/Documents/Bank%20html/home.html#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="file:///C:/Users/User/Documents/Bank%20html/Calculator.html">Loan Calculator</a></li>
+                </ul>
+            </nav>
+            <div class="search-fb">
+                <input type="text" placeholder="Search...">
+
+            </div>
+        </div>
+    </header>
+
+    <div class="loan-calculator">
+        <div class="calculator-form">
+            <h2>Loan Calculator</h2>
+
+            <label for="amount">Loan Amount</label>
+            <input type="range" id="amount" min="5000" max="50000" step="1000" value="5000" />
+            <span id="amount-display">₱5,000</span>
+
+            <label for="term">Loan Term (Months)</label>
+            <input type="range" id="term" min="6" max="24" step="6" value="6" />
+            <span id="term-display">6 Months</span>
+
+            <label for="type">Loan Type</label>
+            <select id="type">
+                <option>Business</option>
+                <option>Personal</option>
+                <option>Education</option>
+                <option>Medical</option>
+            </select>
+
+            <button onclick="calculateLoan()">Calculate Payment</button>
+        </div>
+
+        <div class="result-box" id="result-box">
+            <h3>Loan Summary</h3>
+            <p><strong>Monthly Payment:</strong> <span id="monthly">—</span></p>
+            <p><strong>Total Payment:</strong> <span id="total">—</span></p>
+            <p><strong>Interest:</strong> <span id="interest">—</span></p>
+        </div>
+    </div>
+
+    <script>
+        const amountSlider = document.getElementById("amount");
+        const termSlider = document.getElementById("term");
+        const amountDisplay = document.getElementById("amount-display");
+        const termDisplay = document.getElementById("term-display");
+
+        amountSlider.addEventListener("input", () => {
+            amountDisplay.textContent = `₱${parseInt(amountSlider.value).toLocaleString()}`;
+        });
+
+        termSlider.addEventListener("input", () => {
+            termDisplay.textContent = `${termSlider.value} Months`;
+        });
+
+        function calculateLoan() {
+            const amount = parseFloat(amountSlider.value);
+            const termMonths = parseInt(termSlider.value);
+            const interestRate = 0.08;
+
+            const monthlyRate = interestRate / 12;
+            const monthlyPayment = (amount * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -termMonths));
+            const totalPayment = monthlyPayment * termMonths;
+            const totalInterest = totalPayment - amount;
+
+            document.getElementById("monthly").textContent = `₱${monthlyPayment.toFixed(2).toLocaleString()}`;
+            document.getElementById("total").textContent = `₱${totalPayment.toFixed(2).toLocaleString()}`;
+            document.getElementById("interest").textContent = `₱${totalInterest.toFixed(2).toLocaleString()}`;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            amountDisplay.textContent = `₱${parseInt(amountSlider.value).toLocaleString()}`;
+            termDisplay.textContent = `${termSlider.value} Months`;
+        });
+    </script>
+
+</body>
+</html>
