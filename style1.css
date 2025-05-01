@@ -1,4 +1,88 @@
-/* Reset */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    padding: 40px;
+    margin: 0;
+}
+
+.loan-calculator {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 200px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: auto;
+}
+
+.calculator-form,
+.result-box {
+    flex: 1;
+    min-width: 350px;
+}
+
+    .calculator-form h2 {
+        margin-bottom: 50px;
+        color: #003366;
+    }
+
+    .calculator-form label {
+        display: block;
+        margin: 50px 0 5px;
+        font-weight: 600;
+    }
+
+input[type=range] {
+    width: 100%;
+}
+
+#amount-display,
+#term-display {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+select,
+input[type=range] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 20px;
+    background: #ffc107;
+    color: #003366;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    button:hover {
+        background: #e0a800;
+    }
+
+.result-box {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+    .result-box h3 {
+        color: #003366;
+        margin-bottom: 15px;
+    }
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +91,7 @@
 
 /* Base styles */
 html, body {
-    height: 200%; /* Ensure the body and html take up full height */
+    height: 100%; /* Ensure the body and html take up full height */
     margin: 0;
     padding: 0;
 }
@@ -30,31 +114,12 @@ body {
 /* Container */
 .container {
     width: 90%;
-    max-width: 1200px; /* Fixed max-width for the container */
-    margin: 20px auto;
+    max-width: 1200px;
+    margin: -35px auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Allow wrapping for small screens */
 }
-
-/* Header */
-header {
-    background-color: #003366;
-    color: white;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 15px 0;
-    transition: top 0.3s;
-    display: flex;
-    z-index: 1000;
-    justify-content: space-between; /* Distribute elements across the header */
-    align-items: center; /* Align items vertically */
-    height: 80px; /* Set a fixed height for the header */
-}
-
-/* Logo */
 .logo {
     display: flex;
     align-items: center; /* Ensure vertical alignment */
@@ -65,8 +130,23 @@ header {
         width: auto;
         transition: height 0.3s ease; /* Smooth transition when resizing the logo */
     }
+/* Header */
+header {
+    background-color: #003366;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    transition: top 0.3s;
+    z-index: 1000;
+}
 
-/* Navigation */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -79,11 +159,10 @@ nav ul {
         font-weight: 600;
     }
 
-/* Search Box */
 .search-fb {
     display: flex;
     align-items: center;
-    gap: 10px; /* Space between input and icon */
+    gap: 0px;
 }
 
     .search-fb input {
@@ -92,119 +171,7 @@ nav ul {
         border-radius: 5px;
     }
 
-/* Hero Section */
-.hero {
-    background-image: url('https://d2u9ftrwwkx3r3.cloudfront.net/2fbd42e2315b9119d751c76a64ec52e7/tn_00005.jpg');
-    background-size: cover;
-    background-position: center center;
-    color: white;
-    text-align: left;
-    padding: 145px 10px 145px;
-    background-attachment: fixed;
-}
-
-    .hero h1 {
-        font-family: 'Arial', sans-serif;
-        font-size: 48px; /* Increased font size */
-        font-weight: bold;
-        font-style: normal;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added text shadow for better readability */
-        margin-bottom: 20px; /* Space between the title and the paragraph */
+    .search-fb img {
+        width: 54px;
+        height: 50px;
     }
-
-    .hero p {
-        font-size: 20px; /* Adjust this value as needed */
-        max-width: 1100px; /* Limit the width to improve readability */
-        margin-bottom: 10px; /* Adds space between the paragraph and the button */
-        line-height: 2; /* Increases line height for better readability */
-    }
-
-    .hero .btn {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 10px 25px;
-        background-color: #ffc107;
-        color: #003366;
-        font-weight: bold;
-        text-decoration: none;
-        border-radius: 5px;
-    }
-
-/* Services */
-.services {
-    background: white;
-    padding: 60px 20px;
-    text-align: center;
-    flex-direction: column;
-}
-
-.service-box {
-    margin-top: 30px;
-}
-
-    .service-box h3 {
-        color: #003366;
-        margin-bottom: 10px;
-    }
-
-/* Footer */
-footer {
-    background-color: #003366;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 14px;
-    margin-top: auto; /* Pushes the footer to the bottom */
-}
-
-/* Header hide on scroll down */
-.header-hidden {
-    top: -100px;
-}
-/* About Us Section */
-.about-us {
-    padding: 60px 20px;
-    background-color: #f5f7fa; /* Light background color */
-}
-
-    .about-us h2 {
-        color: #003366; /* Dark blue for header */
-        margin-bottom: -70px; /* Reduces space below the header */
-        font-size: 20px; /* Increases font size of the header */
-    }
-
-/* About Us Section */
-.about-us1 {
-    padding: 60px 20px;
-    background-color: #f5f7fa; /* Light background color */
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Content container */
-.content {
-    display: flex; /* Flexbox to align text and image */
-    align-items: center; /* Vertically center the items */
-    justify-content: space-between; /* Space between text and image */
-}
-
-/* Text styles */
-.about-us1 p {
-    font-size: 17px; /* Sets the font size of the text */
-    line-height: 2; /* Increases the line height for better readability */
-    max-width: 600px; /* Limit text width for better readability */
-    margin-right: 10px; /* Adds space between the text and the image */
-}
-
-/* Image styles */
-.content img {
-    width: 500px; /* Set a fixed width for the image */
-    height: 800px; /* Set a fixed height for the image */
-    object-fit: cover; /* Ensures the image covers the given space */
-    border-radius: 8px; /* Optional: adds rounded corners */
-    margin-left: 200px; /* Adds space between the image and the text */
-}
